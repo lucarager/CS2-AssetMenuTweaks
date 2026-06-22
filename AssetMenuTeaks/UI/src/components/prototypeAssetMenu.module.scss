@@ -1,0 +1,52 @@
+/**
+ * PROTOTYPE — layout overrides for the hijacked asset menu panel.
+ *
+ * `.prototypeMenu` is applied to the panel root by the AssetMenu override
+ * (see prototypeAssetMenu.tsx). The vanilla asset panel is sized for ~9 grid
+ * columns, so when the AssetGrid override adds more columns they overflow —
+ * widen the panel here to give them room.
+ *
+ * Base-game class hashes (e.g. `asset-panel_VFR`) change between game versions,
+ * so we match by class-name *prefix* instead of the exact hash — same trick
+ * used in gameInjection.module.scss.
+ *
+ * These numbers are starting points. Tweak --nt-asset-menu-width first.
+ */
+
+.amt__toggleContainer {
+    position: absolute;
+    border: 1rem solid red;
+    width: 60rem;
+    height: 100rem;
+    bottom: 0px;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.prototypeMenu {
+    // border: 1rem solid blue;
+
+    // // One knob: total width of the asset panel. Vanilla is sized for ~9
+    // // columns; bump this to fit more. (CS2 UI uses rem ~= px at reference res.)
+    // --nt-asset-menu-width: 900rem;
+
+    // // The asset panel container that holds the grid + category header.
+    // [class*="asset-panel_"] {
+    //     width: var(--nt-asset-menu-width);
+    //     max-width: var(--nt-asset-menu-width);
+    // }
+
+    // // // Extra knobs — uncomment if the inner grid area or detail panel needs it:
+    // //
+    // // // The scrolling content area inside the panel.
+    // // [class*="content_"] {
+    // //     width: auto;
+    // //     max-width: none;
+    // // }
+    // //
+    // // // The asset detail flyout that opens beside the panel.
+    // // [class*="detail-container_"] {
+    // //     // e.g. nudge it so it doesn't overlap the widened panel
+    // // }
+}
