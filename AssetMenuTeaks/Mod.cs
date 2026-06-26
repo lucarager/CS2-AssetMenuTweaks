@@ -17,7 +17,7 @@ namespace AssetMenuTweaks {
     public sealed class Mod : LucaModBase<Mod>, IMod {
         public override   string ModName       => "AssetMenuTweaks";
         public override   string Id            => "AssetMenuTweaks"; // binding group; must match UI/mod.json "id"
-        protected override string UiHostPrefix => "AssetMenuTweaks"; // AddHostLocation prefix for coui:// asset URLs
+        protected override string UiHostPrefix => "amt"; // AddHostLocation prefix for coui:// asset URLs
 
         protected override ModSetting CreateSettings(IMod mod) => new Setting(mod);
 
@@ -26,6 +26,10 @@ namespace AssetMenuTweaks {
 
         protected override void RegisterSystems(UpdateSystem updateSystem) {
             updateSystem.UpdateAt<AssetMenuTweaksUISystem>(SystemUpdatePhase.UIUpdate);
+
+#if IS_DEBUG
+            updateSystem.UpdateAt<AssetMenuTweaksDebugPrefabSystem>(SystemUpdatePhase.PrefabUpdate);
+#endif
         }
 
         /// <summary>

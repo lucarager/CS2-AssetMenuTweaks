@@ -5,6 +5,17 @@ const { CSSPresencePlugin } = require("./tools/css-presence");
 const TerserPlugin = require("terser-webpack-plugin");
 const gray = (text) => `\x1b[90m${text}\x1b[0m`;
 
+// Layout constants shared with the TypeScript layer (src/layout.tokens.json).
+// Inject them into every SCSS module as `$amt-*` Sass variables so the panel
+// maths is declared once and consumed by both sides — see assetMenuLayout.ts.
+const LAYOUT_TOKENS = require("./src/layout.tokens.json");
+const SASS_LAYOUT_TOKENS = Object.entries(LAYOUT_TOKENS)
+  .map(([key, value]) => {
+    const sassName = key.replace(/[A-Z]/g, (c) => `-${c.toLowerCase()}`);
+    return `$amt-${sassName}: ${value};`;
+  })
+  .join("\n");
+
 const CSII_USERDATAPATH = process.env.CSII_USERDATAPATH;
 
 if (!CSII_USERDATAPATH) {
@@ -65,7 +76,12 @@ module.exports = {
               },
             },
           },
-          "sass-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              additionalData: SASS_LAYOUT_TOKENS + "\n",
+            },
+          },
         ],
       },
       {

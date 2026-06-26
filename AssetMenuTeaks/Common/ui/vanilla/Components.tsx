@@ -65,6 +65,10 @@ const baseThemePaths: ThemePath[] = [
         name: "toolButton",
     },
     {
+        path: "game-ui/game/components/tool-options/tool-options-panel.module.scss",
+        name: "toolOptionsPanel",
+    },
+    {
         path: "game-ui/game/components/tool-options/mouse-tool-options/mouse-tool-options.module.scss",
         name: "mouseToolOptions",
     },

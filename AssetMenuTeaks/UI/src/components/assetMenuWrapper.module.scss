@@ -1,0 +1,23 @@
+.amt__container {
+    position: absolute;
+    bottom: 0px;
+    left: 100%;
+    margin-left: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    pointer-events: auto;
+    z-index: 1000;
+}
+
+.amt__panel {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem;
+    width: 280rem;
+    margin-bottom: 4rem;
+}
+
+.amt__toggleButton {
+    align-self: flex-start;
+}

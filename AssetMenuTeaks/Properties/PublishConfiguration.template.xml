@@ -1,16 +1,16 @@
 <Publish>
 	<!--Id must be set in order to update existing mod. Not required for the first publish.-->
-	<ModId Value="146296" />
+	<ModId Value="148616" />
 	<!--Name of the mod to display to players-->
-	<DisplayName Value="CPP One Hour Bike Challenge" />
+	<DisplayName Value="Asset Menu Tweaks" />
 	<!--Short description of the mod-->
 	<ShortDescription Value="A Cities: Skylines 2 mod." />
 	<!--Long description. Injected from Properties/LongDescription.md by GeneratePublishConfiguration.-->
 	<LongDescription>
-		Mod that counts things for the CPP One Hour Bike Challenge.
+		Asset Menu Tweaks
 	</LongDescription>
 	<!--Thumbnail-->
-	<Thumbnail Value="Properties/thumb.jpg" />
+	<Thumbnail Value="Properties/thumb.png" />
 	<!--Screenshot, can be set multiple times-->
 	<Screenshot Value="Properties/cover.jpg" />
 	<!--Tag, can be set multiple times-->
@@ -34,5 +34,5 @@
 	<ExternalLink Type="github" Url="https://github.com/lucarager/CS2-AssetMenuTweaks" />
 	<ExternalLink Type="twitch" Url="https://twitch.tv/lucadevdesign" />
 	<!--Supported values Public, Private, Unlisted-->
-	<AccessLevel Value="Public" />
+	<AccessLevel Value="Unlisted" />
 </Publish>

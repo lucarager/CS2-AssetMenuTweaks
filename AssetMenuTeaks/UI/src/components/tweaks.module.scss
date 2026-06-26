@@ -1,0 +1,155 @@
+// ─── Redesigned tabs
+:global(body.amt__redesignedTabs) {
+    [class*="tool-panel_"] > [class*="panel_"][class*="asset-panel_"] {
+        flex-direction: column-reverse;
+
+        & > [class*="header_"] {
+            z-index: 10;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 8rem;
+            border-bottom-right-radius: 8rem;
+
+            & > [class*="asset-category-tab-bar_"] {
+                padding: 0;
+                overflow-x: visible;
+                overflow-y: visible;
+
+                // Close button
+                & > button {
+                    position: absolute;
+                    top: 2px;
+                    right: 2px;
+                }
+
+                & > [class*="items_"] {
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 2rem 6rem;
+
+                    & > button {
+                        margin: 2rem;
+                        width: 30rem;
+                        height: 30rem;
+                        flex-basis: 30rem;
+                        border-radius: 50%;
+                        background-color: rgba(167, 198, 209, 0.2);
+                        background-image: none;
+
+                        &:hover {
+                            background-color: rgba(167, 198, 209, 0.4);
+                            background-image: none;
+                        }
+
+                        &:global(.selected) {
+                            opacity: 1;
+                            background-color: var(--commonCyan);
+                            background-image: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        & > [class*="content_"] {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            border-top-left-radius: 8rem;
+            border-top-right-radius: 8rem;
+        }
+    }
+}
+
+// ─── Widescreen
+:global(body.amt__widescreen) {
+    [class*="tool-layout_"] > [class*="tool-main-column_"] {
+        width: calc(
+            100vw - 2 *
+                (
+                    #{$amt-side-column-base-rem}rem *
+                        (1 + (var(--fontScale) - 1) / 2)
+                ) -
+                #{$amt-widescreen-padding-rem}rem
+        );
+    }
+
+    [class*="tool-panel_"]
+        > [class*="panel_"][class*="asset-panel_"]
+        > [class*="content_"]
+        [class*="item-grid_"] {
+        width: auto;
+
+        & > [class*="content_"] {
+            flex: 2;
+            width: auto;
+        }
+    }
+}
+
+// ─── Hide badges
+:global(body.amt__hideBadges) {
+    [class*="item-grid_"] {
+        [class*="not-enough-money-badge_"],
+        [class*="unlock-highlight-badge_"],
+        [class*="locked-badge_"],
+        [class*="dlc-badge"] {
+            display: none;
+        }
+    }
+}
+
+// ─── Density
+
+// Shared
+:global(body.amt__density_1),
+:global(body.amt__density_2) {
+    [class*="item-grid_"] {
+        [class*="thumbnail_"] {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+:global(body.amt__density_1) {
+    $size: $amt-density-medium-item-rem * 1rem;
+    [class*="item-grid_"] {
+        [class*="item_"] {
+            width: $size;
+            height: $size;
+            min-width: $size;
+            min-height: $size;
+
+            // Target all badges and smaller icons
+            [class*="not-enough-money-badge_"],
+            [class*="unlock-highlight-badge_"],
+            [class*="locked-badge_"],
+            [class*="dlc-badge"] {
+                width: 16rem;
+                height: 16rem;
+            }
+        }
+    }
+}
+
+:global(body.amt__density_2) {
+    $size: $amt-density-high-item-rem * 1rem;
+    [class*="item-grid_"] {
+        [class*="item_"] {
+            width: $size;
+            height: $size;
+            min-width: $size;
+            min-height: $size;
+
+            // Target all badges and smaller icons
+            [class*="not-enough-money-badge_"],
+            [class*="unlock-highlight-badge_"],
+            [class*="locked-badge_"],
+            [class*="dlc-badge"] {
+                width: 12rem;
+                height: 12rem;
+            }
+        }
+    }
+}

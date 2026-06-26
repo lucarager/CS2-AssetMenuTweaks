@@ -1,3 +1,11 @@
 <Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="I18N" />
+    <BuildType Name="Release" />
+  </Configurations>
+  <Folder Name="/Solution Items/">
+    <File Path="CLAUDE.md" />
+  </Folder>
   <Project Path="AssetMenuTeaks/AssetMenuTweaks.csproj" />
 </Solution>
