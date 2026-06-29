@@ -34,7 +34,7 @@ If you'd like to support my modding work, you can do so on [Ko-fi](https://ko-fi
   <!--Link to the forum post where the mod can be discussed-->
   <ForumLink Value="" />
   <!--Version of the mod. Injected from $(Version) by GeneratePublishConfiguration.-->
-  <ModVersion Value="1.0.5" />
+  <ModVersion Value="1.0.6" />
   <!--Recommended version of the base game to use the mod-->
   <GameVersion Value="1.6.*" />
   <!--Dependency for the mod, can be set multiple times-->

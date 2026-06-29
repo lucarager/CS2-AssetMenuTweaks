@@ -37,7 +37,6 @@ namespace AssetMenuTweaks {
         /// Restyles and re-lays-out the asset category tabs (the redesigned tab UI).
         /// </summary>
         [SettingsUISection(GENERAL_GROUP_STR)]
-        [SettingsUIHidden]
         public bool RedesignedTabs { get; set; }
 
         /// <summary>
