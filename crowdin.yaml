@@ -1,3 +1,3 @@
 files:
-  - source: /AssetMenuTweaks/L10N/lang/en-US.json
-    translation: /AssetMenuTweaks/L10N/lang/%locale%.json
+  - source: /AssetMenuTweaks/L10n/lang/en-US.json
+    translation: /AssetMenuTweaks/L10n/lang/%locale%.json
