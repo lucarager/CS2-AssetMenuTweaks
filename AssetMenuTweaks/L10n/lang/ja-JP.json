@@ -1,9 +1,9 @@
 {
   "Options.SECTION[AssetMenuTweaks.AssetMenuTweaks.Mod]": "Asset Menu Tweaks",
   "Options.GROUP[AssetMenuTweaks.AssetMenuTweaks.Mod.GeneralGroupStr]": "General",
-  "Options.GROUP[AssetMenuTweaks.AssetMenuTweaks.Mod.KeybindingsGroupStr]": "Key Bindings",
-  "Options.OPTION[AssetMenuTweaks.AssetMenuTweaks.Mod.Setting.Density]": "Grid Density",
-  "Options.OPTION_DESCRIPTION[AssetMenuTweaks.AssetMenuTweaks.Mod.Setting.Density]": "How tightly the asset grid is packed. Low keeps the vanilla layout; higher densities use smaller buttons to fit more assets per row.",
+  "Options.GROUP[AssetMenuTweaks.AssetMenuTweaks.Mod.KeybindingsGroupStr]": "キー割り当て",
+  "Options.OPTION[AssetMenuTweaks.AssetMenuTweaks.Mod.Setting.Density]": "グリッドの密度",
+  "Options.OPTION_DESCRIPTION[AssetMenuTweaks.AssetMenuTweaks.Mod.Setting.Density]": "アセットグリッドの圧縮度です。\nLowはバニラのレイアウトを維持します。\n高い密度になるほど、行ごとにより多くのアセットを表示するためボタンが小さくなります。",
   "Options.AssetMenuTweaks.AssetMenuTweaks.Mod.DENSITYLEVEL[Low]": "Low",
   "Options.AssetMenuTweaks.AssetMenuTweaks.Mod.DENSITYLEVEL[Medium]": "Medium",
   "Options.AssetMenuTweaks.AssetMenuTweaks.Mod.DENSITYLEVEL[High]": "High",
